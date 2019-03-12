@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html><head>
+<style type="text/css">
+
+/* body的css定义:对应css中“body”，可定义内容为网页字体颜色、背景、浏览器边框等 */
+/* 单元格的css定义:对应css中的“td”，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
+td
+{
+	font-family:"微软雅黑";
+	font-size: 30pt;
+	line-height: 150%;
+	font-weight: normal;
+}
+@font-face {
+	font-family:'KG';
+	src: url(KGBrokenVesselsSketch.ttf);
+}
+.KG{
+	font-family: 'KG';
+	font-size: 50px;
+	text-shadow: none;
+}
+@font-face {
+	font-family:'Headliner' ;
+	src: url('HeadlinerNo.45 DEMO.ttf')  format('truetype');
+}
+.Headliner{
+	font-family: 'Headliner';
+	font-size: 50px;
+	text-shadow: none;
+}
+
+</style>
+<meta http-equiv="x-ua-compatible" content="ie=7">
+</head>
+<body leftmargin="0" topmargin="0" background="u.jpg">
+<table class="mainwidth" width="950" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td width="750" valign="top" height="53">
+<table class="classshowbox" style="BACKGROUND: url(/Skin/webui_07AT/newsboxbg.gif) repeat-x 50% top; MARGIN-TOP: 6px" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="middle">
+<table width="540" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<tr>
+<td width="270" style="font-size: 32pt;font-family:KG;font-weight:bold;color:red;text-shadow: 10px 10px 20px black;"align="center" id="c">离2019年4月选考还有</td>
+<td width="270" style="font-size: 32pt;font-family:KG;font-weight:bold;color:red;text-shadow: 10px 10px 20px yellow;"align="center" id="d">离2019年6月高考还有</td>
+</tr>
+<tr>
+<td width="270" style="font-size: 120pt;font-family:Headliner;color:yellow;font-weight:;text-shadow: 10px 10px 20px black;" id="a"align="center">123</td>
+<td width="270" style="font-size: 120pt;font-family:Headliner;color:yellow;font-weight:;text-shadow: 10px 10px 20px black;" id="b"align="center">456</td>
+</tr>
+<tr>
+<td width="270" style="font-size: 30pt;color:yellow;font-weight:bold;color:red;text-shadow: 10px 10px 20px black;"align="center" id="e">天</td>
+<td width="270" style="font-size: 30pt;color:yellow;font-weight:bold;color:red;text-shadow: 10px 10px 20px yellow;"align="center" id="f">天</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+function f(){
+var T=new Date();
+a.textContent=Math.ceil(17992-(T.getTime()/86400000-T.getTimezoneOffset()/1440))
+if(a.textContent[0]=="-")a.textContent="";
+if(T.getMilliseconds()<250||T.getMilliseconds()>=500&&T.getMilliseconds()<750)a.style.color="yellow";else a.style.color="red";
+b.textContent=Math.ceil(18054-(T.getTime()/86400000-T.getTimezoneOffset()/1440))
+if(b.textContent[0]=="-")b.textContent="";
+if(a.textContent=="")
+if(T.getMilliseconds()<250||T.getMilliseconds()>=500&&T.getMilliseconds()<750)b.style.color="red";else b.style.color="yellow";
+if(T.getTime()>1554566400000)c.textContent=e.textContent="";
+}
+f();setInterval(f, 250);
+</script>
+</body></html>
