@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<style type="text/css">
+.head{background:url(/Skin/webui_07AT/topbg.gif) repeat-x top;}
+#fontzoom{padding-top:8px;line-height:170%;font-size:14px;font-weight:normal;}
+#picphoto *{font-size:12px;font-weight:normal;}
+#photolist img{width:130px;height:90px;border:1px solid #FF6600;padding:1px;}
+marquee,marquee p{margin:0px;padding:0px;}
+.mainlinebg{height:18px;background:url(/Skin/webui_07AT/mainbgline.gif) repeat-x center;}
+.kbg{height:9px;}
+.leftline{background:url(/Skin/webui_07AT/leftbgline.gif) repeat-x bottom;}
+.classbox{background:url(/Skin/webui_07AT/classbg.gif) repeat-x top;width:934px;height:34px;}
+.classboxr{background:url(/Skin/webui_07AT/classrbg.gif) repeat-x top;width:2px;height:34px;}
+.classboxl{background:url(/Skin/webui_07AT/classlbg.gif) repeat-x top;width:2px;height:34px;}
+.mainwidth{width:950px;background:#fff;}
+#mainbody{border-top:6px solid #fff;}
+.mainleft{border-top:6px solid #fff;}
+.maincenter{width:11px;}
+.mainright{border-right:6px solid #fff;}
+
+.leftboxtop{border-top:5px solid #469ac8;width:219px;}
+.leftbox{width:209px;;background:#fff;border:1px solid #ccc;margin-bottom:4px;}
+.leftnavtit{height:28px;background:url(/Skin/webui_07AT/leftnavtit.gif)}
+.leftnava,.leftnavb{display:block;float:left;width:103px;height:25px;text-align:center;line-height:25px;font-weight:bold;}
+.leftnava{background:url(/Skin/webui_07AT/leftnav1.gif) no-repeat center top;color:#666;}
+.leftnavb{background:url(/Skin/webui_07AT/leftnav2.gif) no-repeat center top;color:#008be8;}
+a.leftnavb:link{color:#e75c00;}
+.leftbody{padding:3px;}
+.lefttit{padding-left:34px;line-height:28px;background:url(/Skin/webui_07AT/lefttitbg.gif);color:#2173a1;font-weight:bold;}
+.leftnavbodyb{display:block;}
+.leftnavbodyn{display:none;}
+
+
+.pop img{padding:0px;margin:0px;float:left;}
+.pop{border-bottom:1px solid #fff;}
+.pathline{padding-left:12px;border-bottom:1px solid #acacac;height:25px;background:#d6d6d6;}
+
+.classshowbox{border:1px solid #70bad8;}
+.classshowbox1{border-top:6px border:1px solid #70bad8;}
+.mainbox{border:1px solid #70bad8;}
+.mainnava,.mainnavb{display:block;height:25px;line-height:25px;margin:6px 4px 0px 0px;float:left;cursor:pointer;}
+.mainnava{background:url(/Skin/webui_07AT/mainnavbg1.gif);border-left:1px solid #fff;border-right:1px solid #fff;padding:0px 10px;color:#df411f;}
+a.mainnava:link{color:#df411f;}
+.mainnavb{background:url(/Skin/webui_07AT/mainnavbg2.gif);padding:0px 11px;color:#166e8c;}
+a.mainnavb:link{color:#166e8c;}
+
+#classmenu{color:#fff;}
+#classmenu td a font,#classmenu *{color:#fff;height:18px;font-size:12px;}
+#classmenu td a font:hover{color:#f00;}
+/*网站底部*/
+.flinkbox{padding:6px 0px;}
+.botlink{height:32px;}
+.botpic{background:url(/Skin/webui_07AT/botlinepic.gif) repeat-y 230px;}
+
+/* 网站链接总的css定义:可定义内容为链接字体颜色、样式等 */
+a{text-decoration: none;} /* 链接无下划线,有为underline */ 
+a:link {color: #333;} /* 未访问的链接 */
+a:visited {color: #333;} /* 已访问的链接 */
+a:hover{color: #ae0927;} /* 鼠标在链接上 */ 
+a:active {color: #666;} /* 点击激活链接 */
+
+.Channel2,.Channel{display:block;width:76px;height:29px;text-align:center;line-height:29px;float:left;margin-right:4px;}
+
+.Channel{background:url(/Skin/webui_07AT/chanbg1.gif);color:#1f729f;}
+a.Channel:link {color: #1f729f;}
+a.Channel:visited {color: #1f729f;}
+a.Channel:hover{color: #fc7b03;background:url(/Skin/webui_07AT/chanbg2.gif)}
+a.Channel:active {color: #1f729f;}
+/* 顶部当前频道文字链接的css定义－－调用代码为<a class='channel2' ***>***</a> */
+.Channel2{background:url(/Skin/webui_07AT/chanbg3.gif);color:#fff;}
+a.Channel2:link {color: #fff;}
+a.Channel2:visited {color: #fff;}
+a.Channel2:hover{color: #fff;}
+a.Channel2:active {color: #fff;}
+/* 底部版权信息文字链接的css定义－－与顶部频道文字链接定义的想法相同。可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。调用代码为<a class='bottom' ***>***</a> */
+.Bottom{color:#fff;display:block;hiehg:18px;width:69px;text-align:center;line-height:18px;background:url(/Skin/webui_07AT/botlinkbg.gif);float:left;margin-right:14px;}
+a.Bottom:link {color: #ffffff;}
+a.Bottom:visited {color: #ffffff;}
+a.Bottom:hover{color: #ed5621;}
+a.Bottom:active {color: #ffffff;}
+/* 文章栏目标题文字链接的css定义－－可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。要相同可不设置。调用代码为<a class='class' ***>***</a> */
+a.class:link {color: #ffffff;}
+a.class:visited {color: #ffffff;}
+a.class:hover{color: #ff0000;}
+a.class:active {color: #ffffff;}
+
+/* body的css定义:对应css中“body”，可定义内容为网页字体颜色、背景、浏览器边框等 */
+body
+{
+font-family:'宋体';
+color:#000;
+margin:0px;
+font-size: 14pt;background:#b4b8c4;
+text-decoration: none;
+scrollbar-face-color: #f6f6f6;
+scrollbar-highlight-color: #ffffff; scrollbar-shadow-color: #cccccc; scrollbar-3dlight-color: #cccccc; scrollbar-arrow-color: #330000; scrollbar-track-color: #f6f6f6; scrollbar-darkshadow-color: #ffffff;
+}
+/* 单元格的css定义:对应css中的“td”，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
+td
+{
+	font-family:"宋体";
+	font-size: 30pt;
+	line-height: 150%;
+	font-weight: normal;
+}
+te
+{
+	font-family:"宋体";
+	font-size: 80pt;
+	line-height: 150%;
+	font-weight: normal;
+}
+/* 文本框的css定义:对应css中的“input”，这里为文本框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+/*input
+{
+background-color: #ffffff; 
+border-bottom: #666666 1px solid;
+border-left: #666666 1px solid;
+border-right: #666666 1px solid;
+border-top: #666666 1px solid;
+color: #666666;
+height: 18px;
+border-color: #666666 #666666 #666666 #666666; font-size: 9pt
+}
+/* 按钮的css定义:对应css中的“button”，这里为按钮的风格设置，可定义内容为背景、字体、颜色、边框等 */
+button
+{
+font-size: 9pt;height: 20px;
+}
+/* 下拉列表框的css定义:对应css中的“select”，这里为下拉列表框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+select
+{
+font-size: 9pt;height: 20px;
+}
+/* 顶部用户登录文字链接的css定义 */
+.top_userlogin
+{
+color: #037fa8;
+}
+.xxdjdbt {
+	COLOR: #000000;
+	border: 1px dotted #CCCCCC;
+}
+.xxdjdbt A {
+	FONT-SIZE: 22pt;
+	COLOR: #ff0000;
+	TEXT-DECORATION: none;
+	font-family: "华文中宋";
+	font-weight: bold;
+	line-height: normal;
+}
+.xxdjdbt A:hover {
+	COLOR: #FF0000}
+.xxdjdbt a:visited {
+	COLOR: #ff0000;
+}
+.xxdjdbt1 {
+	COLOR: #FC712C;
+}
+.xxdjdbt1 A {
+	FONT-SIZE: 14pt;
+	COLOR: #FC712C;
+	TEXT-DECORATION: none;
+	font-family: "黑体";
+	font-weight: bold;	
+         line-height: normal;
+}
+.xxdjdbt1 A:hover {
+	COLOR: #FC712C}
+.xxdjdbt1 a:visited {
+	COLOR: #FC712C;
+}
+
+/* ==频道通用表格css定义开始== */
+.Channel_border,.user_item_list /* 灰色表格边框背景颜色定义(760) */
+{
+border: 1px solid #cccccc;
+}
+.Channel_title /* 标题背景颜色定义(760) */
+{
+background: #cccccc;color: #037fa8;height: 27;text-align: center;font-weight:bold;
+}
+.channel_tdbg /* 表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+.channel_pager /* 分页表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+
+　　/* --评论显示页的css定义开始-- */
+.Comment_border{margin-bottom:2px;}
+.comment_border,.Comment_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #fff;
+}
+.comment_title,.Comment_title /* 标题背景颜色定义(760) */
+{
+background:#e6f5ff;color: #666;font-weight: normal;height: 22;
+}
+.comment_tdbg1 /* 表格背景颜色定义(760) */
+{
+background:#ffffff;line-height: 120%;
+}
+.comment_tdbg2 /* 留言显示1px表格背景颜色定义 */
+{
+background:#fafafa;
+}
+　　/* --评论显示页的css定义结束-- */
+/* ==频道通用表格css定义结束== */ 
+
+/* ==简短标题文字的css定义开始== */
+/* [图文]简短标题文字的css定义 */
+.s_headline1
+{
+color: blue;
+}
+/* [组图]简短标题文字的css定义 */
+.s_headline2
+{
+color: #ff6600;
+}
+/* [推荐]简短标题文字的css定义 */
+.s_headline3
+{
+color: green;
+}
+/* [注意]简短标题文字的css定义 */
+.s_headline4
+{
+color: red;
+}
+/* ==简短标题文字的css定义开始== */
+
+/* ==top.asp中的css定义开始== */
+.top_tdbgall /* 顶部表格总背景颜色定义 */
+{
+width: 760;background:#ffffff;
+}
+.top_top
+{
+background:#0089f7;height: 2;
+}
+.top_channel /* 频道表格背景、文字颜色定义 */
+{
+background:#0089f7;color:#3ab1f5!important;text-align: right;border-top: 1px solid #ffffff;border-bottom: 1px solid #ffffff;
+}
+.top_announce /* 公告表格背景、文字颜色定义 */
+{
+background:url(/Skin/blue/top_nav_menu.gif);color: #0560a6;height: 30;
+}
+.top_nav_menu /* 导航栏表格背景、文字颜色定义 */
+{
+	color: #ffffff;
+	height: 22;
+	background-image: url(/Skin/ocean/menu_bg2.gif);
+	padding-left: 33px;
+
+}
+.top_path /* 您现在的位置表格背景、文字颜色定义 */
+{
+width: 760;background:#ffffff;height: 30;
+}
+.top_userlogin /* 顶部用户登录文字链接的css定义 */
+{
+color: #037fa8
+}
+/* ==top.asp中的css定义结束== */
+
+/* ==网页中部中的css定义开始== */
+.center_tdbgall /* 中部表格总背景颜色定义 */
+{
+background:#ffffff;
+width:770px;
+}
+　　/* --网页中部左栏的css定义开始-- */
+.left_tdbgall /* 左栏表格总背景颜色定义 */
+{
+background:#ffffff;
+}
+.left_title /* 左栏标题表格背景、文字颜色定义 */
+{
+	font-weight:bold;
+	color: ffffff;
+	height: 28px;
+	padding-left:20px;
+	text-align: left;
+	background-image: url(/Skin/ocean/right_t.gif);
+	width: 182px;
+}
+.left_tdbg1 /* 左栏内容表格背景、文字颜色定义 */
+{
+	padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
+	border-top-style: none;	border-bottom-style: none;	border-color: #a4c6fc;border-right-style: solid;border-left-style: solid;
+}
+.left_tdbg2 /* 左栏底部表格背景、文字颜色定义 */
+{
+	height: 10px;
+	background-image: url(/Skin/ocean/tdbg_bottom.gif);
+	background-repeat: no-repeat;
+}
+.right_title_bs06 /* 右栏标题表格背景、文字颜色定义 */
+
+{
+	font-weight:bold;
+	color: ffffff;
+	height: 28px;
+	padding-left:20px;
+	text-align: left;
+	background-image: url(/Skin/ocean/right_t.gif);
+}
+.right_title /* 左栏标题表格背景、文字颜色定义 */
+{
+background:url(/Skin/blue/right_title.gif);font-weight:bold;color: ffffff;height: 28;width:180;padding-left:40;text-align: left;
+}
+　　/* --网页中部左栏的css定义结束-- */
+　　/* --网页中部中栏的css定义开始-- */
+.main_tdbgall /* 中栏表格总背景颜色定义 */
+{
+width: 572;background:#ffffff;
+}
+.main_shadow /* 中栏内容间隔表格背景颜色定义(575) */
+{
+height: 4;
+}
+.main_announce /* 中栏公告表格背景、文字颜色定义 */
+{
+color: 037fa8;height: 25;background:#f9f9f9;border: 1px solid #d2d3d9;
+}
+.main_search /* 中栏搜索表格背景、文字颜色定义 */
+{
+color: 037fa8;height: 25px;border: 1px solid #d2d3d9;background:#f9f9f9;
+}
+.main_top /* 中栏最新推荐表格背景颜色定义 */
+{
+background:url(/Skin/blue/main_top.gif);height: 187;
+}
+.main_title_760i /* 网站首页中栏标题表格背景、文字颜色定义(760) */
+{
+color: ffffff;
+background-image: url(/Skin/ocean/main_bs.gif);
+border-right: 1px solid #1c65be;
+text-align: left;padding-left:30;height: 27;
+
+}
+.main_tdbg_760i /* 网站首页中栏内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;
+}
+.main_title_575 /* 中栏标题表格背景、文字颜色定义(575) */
+{
+    font-weight: bold;
+	background-image: url(/Skin/webui_07AT/maintitbg.gif);
+	height: 31px;
+color:#fff;
+font-size:14px;
+	padding-left: 4px;
+margin:1px;
+}
+.main_title_bs06 /* 中栏标题表格背景、文字颜色定义(bs06) */
+{
+	color: ffffff;
+	text-align: left;
+	padding-left:30px;
+	height: 27px;
+	background-image: url(/Skin/ocean/main_bs.gif);
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+	font-weight: bold;
+}
+.main_tdbg_bsd06 /* 中栏内容表格背景、文字颜色定义(bsd06) */
+{
+	color: ffffff;	height: 4px;	background-image: url(/Skin/ocean/main_02.gif);
+}
+.main_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
+{
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #aec6e8;
+	border-bottom-color: #aec6e8;
+	border-left-color: #aec6e8;
+	background-image: url(/Skin/ocean/main_bg.gif);
+	background-color: #ffffff;
+}
+.main2_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
+{
+	line-height: 150%;
+	text-align: left;
+	padding-left:5;
+	padding-right:5;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #aec6e8;
+	background-image: url(/Skin/ocean/main_bg.gif);
+	background-color: #ffffff;
+}
+TEXTAREA{border:1px solid #999;margin:4px 0px 0px 4px;}
+.main_tdbg_575 /* 中栏内容表格背景、文字颜色定义(575) */
+{
+line-height: 150%;text-align: left;padding:5px;
+background:url(/Skin/webui_07AT/mainboxbg.gif) repeat-x bottom;
+}
+.main_title_282i,.main_title_282 /* 栏目文章列表标题表格背景、文字颜色定义(282) */
+{
+background:#e5f5fb;color: ffffff;
+height: 27px;
+padding-left:6px;
+text-align: left;
+font-weight: bold;
+}
+.main_title_282i a{display:block;padding:0px 16px;height:25px;line-height:25px;margin-top:2px;background:url(/Skin/webui_07AT/main1titbg.gif);border-right:1px solid #fff;border-left:1px solid #fff;float:left;color:#df411f;}
+.main_tdbg_282i /* 栏目文章列表内容表格背景、文字颜色定义(282) */
+{
+line-height:25px;text-align: left;
+background:url(/Skin/webui_07AT/mainboxbg.gif) repeat-x bottom;
+}
+
+.main_tdbg_282 /* 栏目文章列表内容表格背景、文字颜色定义(282) */
+{
+border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padding-right:5;
+}
+.listbg /* --栏目文章列表内容间隔颜色的定义1-- */
+{
+line-height:24px;
+}
+.listbg2 /* --栏目文章列表内容间隔颜色的定义2-- */
+{
+line-height:24px;
+}
+.listbga
+{line-height:22px;
+border-bottom: #ccc 1px dashed;
+}
+
+
+
+　　/* --网页中部中栏的css定义结束-- */
+　　/* --文章显示页的css定义开始-- */
+
+.main_ArticleTitle /* 主标题文字颜色定义 */
+{
+color:#f80000;font-weight:bold;font-size: 18px;line-height: 150%;
+border-bottom:1px solid #ccc;
+}
+.main_articlesubheading /* 副标题文字颜色定义 */
+{
+color: 037fa8;font-weight:bold;line-height: 150%;
+}
+.main_title_760 /* 标题导航表格背景、文字颜色定义(760) */
+{
+    font-weight: bold;
+	background-image: url(/Skin/webui_07AT/maintitbg.gif);
+	height: 31px;
+text-align:left;
+
+color:#fff;
+font-size:14px;
+	padding-left: 4px;
+margin:1px;
+}
+.main_title_760 b{font-size:14px;}
+.main_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;padding: 8;line-height: normal;
+}
+.Article_tdbgall /* 责编等表格背景、文字颜色定义(760) */
+{
+background:#f5f5f5;
+}
+
+　　/* --文章显示页的css定义结束-- */
+　　/* --留言频道css定义开始-- */
+/* 留言栏目标题文字链接的css定义－－调用代码为<a class='guest' ***>***</a> */
+a.Guest:link {color: #c00;}
+a.Guest:visited {color: #c00;}
+a.Guest:hover{color: #ff0000;}
+a.Guest:active {color: #c00;}
+
+.Guest_title_760 /* 标题导航表格背景、文字颜色定义(760) */
+{
+    font-weight: bold;
+	background-image: url(/Skin/webui_07AT/maintitbg.gif);
+	height: 31px;
+color:#fff;
+text-align:left;
+font-size:14px;
+	padding-left: 4px;
+margin:1px;
+}
+.Guest_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #d2d3d9;padding: 8;
+}
+.Guest_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #449ae8;
+}
+.Guest_title /* 标题背景颜色定义(760) */
+{
+background:#449ae8;color: #ffffff;font-weight: normal;height: 25;
+}
+.Guest_tdbg /* 表格背景颜色定义(760) */
+{
+line-height: 120%;
+}
+.Guest_tdbg_1px /* 留言显示1px表格背景颜色定义 */
+{
+background:#d2d3d9;
+}
+.Guest_border2 /* 回复表格虚线边框背景颜色定义(760) */
+{
+border: 1px dashed #97d2df;background:#e8f5f8;color: #006633;
+}
+.Guest_replyadmin /* 管理员回复文字背景颜色定义(760) */
+{
+color: #ff0000;
+}
+.Guest_replyuser /* 用户回复文字背景颜色定义(760) */
+{
+color: #449ae8;
+}
+　　/* --留言频道css定义结束-- */
+　　/* --商城的css定义开始-- */
+.pic1,.pic2{padding:1px;border:1px solid #cee4f6;}
+.pic3{padding:1px;border:1px solid #f79b7d;}
+.pic5{padding:2px;border:1px solid #cee4f6;display:block;}
+.pic5:hover{border:1px solid #f79b7d;}
+.shop_border /* 蓝色表格边框背景颜色定义(760) */
+{
+border: 1px solid #1C65BE;
+}
+.shop_border3 /* 灰色表格边框背景颜色定义(760) */
+{
+border: 1px solid #cccccc;
+}
+.shop_title /* 标题背景颜色定义(760) */
+{
+    font-weight: bold;
+	color: #ffffff;
+	background-image: url(/Skin/ocean/main_bs1.gif);
+	height: 27px;
+	padding-left: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+}
+.shop_tdbg /* 表格背景颜色定义(760) */
+{
+background:#fafafa;line-height: 120%;
+}
+.shop_tdbg2 /* 表格背景颜色定义2 */
+{
+background:#f5f5f5;line-height: 120%;
+}
+.shop_tdbg3 /* 表格背景颜色定义3 */
+{
+background:#ffffff;line-height: 120%;
+}
+.shop_tdbg4 /* 表格背景颜色定义4 */
+{
+background:#e1f4ee;line-height: 120%;
+}
+
+　　/* --商城的css定义结束-- */
+/* ==网页中部中的css定义结束== */
+
+/* ==bottom.asp中的css定义开始== */
+.bottom_tdbgall /* 底部表格总背景颜色定义 */
+{
+width: 760;background:#ffffff;
+}
+.bottom_adminlogo /* 管理信息表格背景、文字颜色定义 */
+{
+background:#0089f7;color:#ffffff;
+}
+.bottom_copyright /* 版权信息表格背景、文字颜色定义 */
+{
+background:#ffffff;color:#000000;
+}
+.copyright{color:#666;font-family:Arial, '宋体';line-height:22px;}
+/* ==bottom.asp中的css定义结束== */
+
+/* ==自选风格中的css定义结束== */
+.menu
+{
+background-color: #cccccc;width:97%;border: 1px;
+}
+.menubody
+{
+background-color: #ffffff;
+}
+/* ==自选风格中的css定义结束== */
+.channel_font /* 搜索等特殊文字颜色定义 */
+{
+color: red;
+}
+/* --评论显示页的css定义开始-- */ 
+.guest_font /* 隐藏、用户等特殊文字颜色定义 */
+{
+color: green;
+}
+/* --评论显示页css定义结束-- */
+/* --留言频道css定义开始-- */
+/* 留言栏目标题文字链接的css定义－－调用代码为<a class='guest' ***>***</a> */
+a.guest:link {color: #000000;}
+a.guest:visited {color: #000000;}
+a.guest:hover{color: #ff6600;}
+a.guest:active {color: #000000;} 
+
+/* 站内链接文字颜色定义 */
+a.channel_keylink{text-decoration: underline;}
+a.channel_keylink:link {color: blue;}
+a.channel_keylink:visited {color: blue;}
+a.channel_keylink:hover{color: #ff0000;}
+a.channel_keylink:active {color: blue;}
+
+/* --用户控制css定义开始-- */
+.user_border{border:1px solid #70bad8;padding:1px;background:url(/Skin/webui_07AT/mainboxbg.gif) repeat-x bottom;}
+.user_left /*左区块定义*/
+{
+background:#f3f3f3;width:170px;padding-left: 4px;border-left-width: 2px;border-left-style: solid;border-left-color: #ffffff;padding-right: 4px;
+}
+.userlogo{border:1px solid #c3cfd8;height:18px;}
+.user_box/*左区块内标题栏定义*/
+{
+
+}
+.user_righttitle img{display:none;}
+.user_righttitle {
+background-image: url(/Skin/webui_07AT/maintitbg.gif);
+height: 31px;
+color:#666;
+font-size:12px;
+padding-left: 8px;
+margin:1px;
+}
+.user_line {
+line-height: 1px;background-image: url(/Skin/ocean/line.gif);
+}
+.user_toolstop/*左区块内标题栏定义*/
+{
+line-height: 28px;font-size: 12px;font-weight: bold;color: #666666;padding-left: 10px;letter-spacing: 4pt;
+}
+.user_toolsbot/*左区块内内容定义*/
+{
+line-height: 25px;font-size: 12px;color: #666666;border-right-width: 4px;border-right-style: solid;border-right-color: #ffffff;
+}
+.user_toolspoint/*区块内箭头栏定义*/
+{
+padding-left: 6px;
+}
+
+/*用户控制面板右*/
+.user_right {
+background-color: #ffffff;padding-right: 2px;padding-left: 6px;width:572px;
+}
+.border1
+{
+border: 1px solid #bfbfbf;
+}
+
+.title
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.border
+{
+border: 1px solid #797f89;
+}
+.tdbg
+{
+
+}
+.tdbgmouseover{
+background:#bfdfff;line-height: 120%;
+}
+.tdbg2
+{
+background:#e0eef5;line-height: 120%;
+}
+.tdbg5
+{
+background:#e0eef5;line-height: 120%;
+}
+.title5
+{
+width:80px;background:url('../user/images/titlebg2.gif');line-height: 120%;padding-top:2px;cursor:hand;color:#fff;
+}
+.title6
+{
+width:80px;background:url('../user/images/titlebg1.gif');color: #b60000;font-weight: normal;padding-top:2px;cursor:hand;
+}
+.button1
+{
+width:90px;
+}
+.show_page {
+text-align: center;
+}
+
+
+/* 固定排课表格表格的css定义*/
+.date_border
+{
+border: 1px solid ;
+}
+.date_title
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.date_tdbg
+{
+background:#449ae8;color: #ffffff;font-weight: normal;
+}
+.style2
+{
+font-size: 10px;
+}
+.style3
+{
+font-size: 12px;
+}
+
+/* ==rss连接框定义== */
+#popitmenu {
+    border-right: black 1px solid; border-top: black 1px solid; z-index: 100; visibility: hidden; font: 12px/18px verdana; border-left: black 1px solid; border-bottom: black 1px solid; position: absolute; background-color: black
+}
+#popitmenu a {
+    display: block; padding-left: 6px; color: black; text-decoration: none;
+}
+#popitmenu a:hover {
+    background-color: #ccff9d;
+}
+
+/* ==用户登录框定义== */
+.userbox{
+}
+#userlogined
+{
+padding-left:10px;text-align:left;
+}
+#UserLogin{padding-top:2px;}
+#Userlogin input{height:19px;float:left;}
+#userctrl
+{
+    text-align: center;
+}
+#usermessage
+{
+padding-left:10;text-align: left;
+}
+.userlog{
+color:#666;
+}
+.havemessage
+{
+    background-color: #ccff9d;
+}
+.havemessaged
+{
+    background-color: #cc0000;
+}
+.bloglist  /* 聚合空间列表定义 */
+{
+width: 100%;text-align: center;
+}
+.bloglist_image
+{
+text-align: center;
+}
+.bloglist_intro
+{
+text-align: center;
+}
+#showbloglist_more
+{
+text-align: right;padding-right:10;
+}
+/* ==供求信息div按钮定义开始== */
+#supply{
+margin:0px;
+padding:0px;
+color:#fff;
+}
+.supplybut,.supplybutover{
+margin:0px;
+padding:1px;
+line-height:25px;
+border-top: 1px solid #d2d3d9;border-right: 1px solid #d2d3d9;border-left: 1px solid #d2d3d9;text-align: left;padding-left:30;padding-right:15px;
+display: block;
+float:left;
+margin-right:8px;
+cursor:hand;
+}
+.supplybut{
+background:url(/Skin/blue/main_title_575.gif);
+}
+.supplybutover{
+background:url(/Skin/blue/main_title_282.gif);
+}
+/* ==供求信息div按钮定义开始== */
+.right_tdbgbs06 {
+padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
+	border-top-style: none;	border-bottom-style: none;	border-color: #a4c6fc;border-right-style: solid;border-left-style: solid;
+}
+.right_tdbg2 {
+	background-image: url(/Skin/ocean/tdbg_bottom.gif);
+	background-repeat: no-repeat;
+	height: 10px;
+}
+.main_title_bsf {
+	font-weight: bold;
+	color: #ffffff;
+	background-image: url(/Skin/ocean/main_bs1.gif);
+	height: 27px;
+	padding-left: 30px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #1c65be;
+}
+.mainblinks {
+	background-image: url(/Skin/ocean/links_02.gif);
+	height: 27px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.menu_bottombg {
+	color: #ffffff;
+	background-image: url(/Skin/ocean/menu_bottombg.gif);
+	height: 31px;
+}
+.bottom_bg {
+	background-image: url(/Skin/webui_07AT/bottombg.gif);line-height:25px;
+}
+.showa {
+	color: #aed2fe;
+}
+.menu_s {
+	color: #ffffff;
+	background-image: url(/Skin/ocean/menu_bg.jpg);
+	height: 26px;
+}
+/* --公告显示文字(滚动条)的css定义开始-- */
+.AnnounceBody2 {color:#666666;}
+a.AnnounceBody2:link {color: #666666;}
+a.AnnounceBody2:visited {color: #666666;}
+a.AnnounceBody2:hover{color: #f80000;}
+a.AnnounceBody2:active {color: #666666;}
+/* --公告显示文字(滚动框)的css定义开始-- */
+.AnnounceBody1 {color:#333;}
+a.AnnounceBody1:link {color: #333333;}
+a.AnnounceBody1:visited {color: #333333;}
+a.AnnounceBody1:hover{color: #ff0000;}
+a.AnnounceBody1:active {color: #333333;}
+/* --公告显示文字(滚动框、滚动条)的css定义结束-- */
+hr
+{
+height:1px;
+color:#5575B0；
+}
+/* --房产信息列表表格css定义开始-- */
+.houselistbg /* --房产信息列表内容间隔颜色的定义1-- */
+{
+background:#ffffff;
+}
+.houselistbg2 /* --房产信息列表内容间隔颜色的定义2-- */
+{
+background:#f6f9ff;
+}
+.houseth{
+background:#e6f5ff;
+}
+.housetable{
+border: 1px solid #ffffff;
+border-collapse: collapse;
+}
+/* --房产信息列表表格css定义结束--
+
+/* 自定义列表标签链接文字颜色定义 */
+a.aaa{text-decoration: none;}
+a.aaa:link {color: #333;FONT-SIZE: 11pt;}
+a.aaa:visited {color: #333;FONT-SIZE: 11pt;}
+a.aaa:hover{color: #ae0927;FONT-SIZE: 11pt;}
+a.aaa:active {color: #666;FONT-SIZE: 11pt;}
+</style>
+<meta http-equiv="x-ua-compatible" content="ie=7">
+</head>
+<body leftmargin="0" topmargin="0" style="background-color:#f0f0f0">
+
+ 
+   
+  <table class="mainwidth" width="950" cellspacing="0" cellpadding="0" border="0" align="center"style="background-color:#f0f0f0">
+    <tbody><tr>
+      <td width="750" valign="top" height="53">
+        <table class="classshowbox" style="BACKGROUND: url(/Skin/webui_07AT/newsboxbg.gif) repeat-x 50% top; MARGIN-TOP: 6px" width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="320" valign="middle" align="center"><script type="text/javascript">
+   var focus_width=400
+   var focus_height=400
+   var text_height=0
+   var swf_height = focus_height+text_height
+   document.write('<object classid=clsid:d27cdb6e-ae6d-11cf-96b8-444553540000 codebase=http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0 width='+ focus_width +' height='+ swf_height +'>');
+   document.write('<param name=allowScriptAccess value=sameDomain><param name=movie value=flash5239.swf><param name=quality value=high><param name=bgcolor value=#F0F0F0>');
+   document.write('<param name=menu value=false><param name=wmode value=opaque>');
+   document.write('<param name=FlashVars value=borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'>');
+   document.write('<embed  height='+ swf_height +' src=flash5239.swf  wmode=opaque FlashVars=borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+' menu=false bgcolor=#F0F0F0 quality=high width='+ focus_width +' height='+ focus_height +' allowScriptAccess=sameDomain type=application/x-shockwave-flash pluginspage=http://www.macromedia.com/go/getflashplayer />');
+   document.write('</object>');
+</script> </td>
+<td valign="middle">
+<table width="540" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<tr>
+<td width="270" style="font-size: 32pt;font-weight:bold;color:blue;"align="center" id="c">离2019年4月选考还有</td>
+<td width="270" style="font-size: 32pt;font-weight:bold;color:blue;"align="center" id="d">离2019年6月高考还有</td>
+</tr>
+<tr>
+<td width="270" style="font-size: 120pt;font-family:consolas;color:blue;font-weight:bold;" id="a"align="center">123</td>
+<td width="270" style="font-size: 120pt;font-family:consolas;color:blue;font-weight:bold;" id="b"align="center">456</td>
+</tr>
+<tr>
+<td width="270" style="font-size: 30pt;color:blue;font-weight:bold;"align="center" id="e">天</td>
+<td width="270" style="font-size: 30pt;color:blue;font-weight:bold;"align="center" id="f">天</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+function f(){
+var T=new Date();
+a.textContent=Math.ceil(17992-(T.getTime()/86400000-T.getTimezoneOffset()/1440))
+if(a.textContent[0]=="-")a.textContent="";
+if(T.getMilliseconds()<250||T.getMilliseconds()>=500&&T.getMilliseconds()<750)a.style.color="blue";else a.style.color="red";
+b.textContent=Math.ceil(18054-(T.getTime()/86400000-T.getTimezoneOffset()/1440))
+if(b.textContent[0]=="-")b.textContent="";
+if(a.textContent=="")
+if(T.getMilliseconds()<250||T.getMilliseconds()>=500&&T.getMilliseconds()<750)b.style.color="red";else b.style.color="blue";
+if(T.getTime()>1554566400000)c.textContent=e.textContent="";
+}
+f();setInterval(f, 250);
+</script>
+</body></html>
